@@ -447,3 +447,507 @@ header nav .toggle-menu {
     top: 1px;
 }
 /* End Design Section */
+/* Start Portfolio Section */
+.portfolio {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+}
+
+.portfolio .shuffle {
+    display: flex;
+    justify-content: center;
+}
+
+.portfolio .shuffle li {
+    padding: 10px;
+}
+
+.portfolio .shuffle li.active {
+    background-color: var(--main-color);
+    color: white;
+}
+
+.portfolio .image-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 60px;
+}
+
+.portfolio .image-container .box {
+    position: relative;
+    overflow: hidden;
+}
+@media (min-width: 768px) { 
+    .portfolio .image-container .box {
+        flex-basis: 50%;
+    }
+}
+@media (min-width: 1199px) { 
+    .portfolio .image-container .box {
+        flex-basis: 25%;
+    }
+}
+
+.portfolio .image-container .box:hover .caption {
+    bottom: 0;
+}
+
+.portfolio .image-container .box:hover img {
+    transform: rotate(3deg) scale(1.1);
+}
+
+.portfolio .image-container .box img {
+    max-width: 100%; /* Pour que l'image ne sort pas du container, prend 100% de la dimension du container*/
+    transition: 0.3s;
+}
+
+.portfolio .image-container .box .caption {
+    position: absolute ;
+    background-color: white;
+    padding: 20px;
+    left: 0;
+    transition: 0.3s;
+    width: 100%;
+    bottom: -100%;
+}
+
+.portfolio .image-container .box .caption h4 {
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+
+.portfolio .image-container .box .caption p {
+    color: var(--main-color);
+}
+
+.portfolio .more {
+    background-color: var(--main-color);
+    color: white;
+    padding: 20px;
+    display: block;
+    width: fit-content;
+    margin: 30px auto; /* Center to link */ 
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+/* End Portfolio Section */
+/* Start Video Section */
+.video {
+    position: relative;
+}
+
+.video::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0 0 0 / 40%);
+}
+
+.video video {
+    width: 100%;
+}
+
+.video .text {
+    position: absolute;
+    width: 100%;
+    max-height: 100%;
+    text-align: center;
+    color: white;
+    padding: 50px;
+    background-color: var(--transparent-color);
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.video .text h2 {
+    margin: 0 0 30px;
+    text-transform: uppercase;
+    font-weight: normal;
+}
+
+.video .text p {
+    margin-bottom: 30px;
+}
+
+.video .text button {
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    text-transform: uppercase;
+}
+/* End Video Section */
+/* Start About Section */
+.about {
+    padding-top: var(--section-padding);
+    overflow: hidden;
+    text-align: center;
+}
+
+.about img {
+    position: relative;
+    bottom: -120px;
+    margin-top: -120px; /* Pour le ramener vers le haut */
+    max-width: 100%;
+}
+@media (max-width: 767px) { 
+    .about img {
+        bottom: -60px;
+        margin-top: -60px;
+    }
+}
+/* End About Section */
+/* Start Stats Section */
+.stats {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+    text-align: center;
+    position: relative;
+    background-image: url(../images/stats.png);
+    background-size: cover;
+    width: 100%;
+}
+.stats::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0 0 0 / 70%);
+}
+
+.stats .container {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.stats .container .box {
+    color: white;
+    padding: 50px;
+    background-color: var(--transparent-color);
+}
+@media (max-width: 767px) { 
+    .stats .container .box {
+        flex-basis: 100%;
+    }
+}
+@media (min-width: 767px) { 
+    .stats .container .box {
+        flex-basis: 50%;
+    }
+}
+@media (min-width: 992px) { 
+    .stats .container .box {
+        flex-basis: 25%;
+    }
+}
+
+.stats .container .box i {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 30px;
+    background-color: black;
+    border-radius: 50%;
+}
+
+.stats .container .box .number {
+    font-size: 50px;
+    font-weight: bold;
+    margin: 0 0 20px;
+}
+
+.stats .container .box p {
+    font-size: 14px;
+}
+/* End Stats Section */
+/* Start Skills Section */
+.our-skills {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+}
+
+.our-skills .container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+@media (min-width: 992px) { 
+    .our-skills .container > div {  /*Direct child (div), cible les deux div dans le container*/
+        flex-basis: 45%;
+    }
+}
+
+.our-skills .container > div > h3 {
+    margin: 0 0 30px;
+    font-weight: normal;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.our-skills .container > div > p {
+    color: #777;
+    line-height: 2;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.our-skills .testimonials {
+    position: relative;
+}
+
+.our-skills .testimonials .content-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.our-skills .testimonials .content-box img {
+    width: 100px;
+    max-height: 100px;
+    border-radius: 50%;
+    margin: auto 50px auto;  /*top right bottom left*/
+}
+@media (max-width: 767px) { 
+    .our-skills .testimonials .content-box {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+    .our-skills .testimonials .content-box img {
+        margin: 0 auto 20px;
+    }
+}
+
+.our-skills .testimonials .content-box .text {
+    position: relative;
+    line-height: 1.8;
+    border-bottom: 1px solid #CCC;
+}
+
+.our-skills .testimonials .content-box .text p {
+    color: #777;
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-align: right;
+}
+
+.our-skills .testimonials .bullet {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.our-skills .testimonials .bullet li {
+    width: 14px;
+    height: 14px;
+    border: 1px solid #aaa;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.our-skills .testimonials .bullet li.active {
+    background-color: var(--main-color);
+    border-color: var(--main-color);
+}
+
+.our-skills .skills .prog-holder {
+    margin-bottom: 40px;
+}
+
+.our-skills .skills .prog-holder h4 {
+    margin-bottom: 15px;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+
+.our-skills .skills .prog-holder .prog {
+    background-color: #dedadc;
+    height: 30px;
+}
+
+.our-skills .skills .prog-holder .prog span {
+    display: block;
+    background-color: var(--main-color);
+    height: 100%;
+    position: relative;
+}
+.our-skills .skills .prog-holder .prog span::before {
+    content: attr(data-progress);
+    position: absolute;
+    background-color: black;
+    color: white;
+    width: 40px;
+    text-align: center;
+    padding: 4px 0; /*top right bottom left*/
+    left: 95%;
+    top: -120%;
+    border-radius: 4px;
+
+}
+.our-skills .skills .prog-holder .prog span::after {
+    content: '';
+    position: absolute;
+    border-style: solid;
+    border-width: 8px;
+    border-color: black transparent transparent transparent;
+    right: -7px;
+    top: -10px;
+}
+/* End Skills Section */
+/* Start Quote Section */
+.quote {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+    position: relative;
+    text-align: center;
+    color: white;
+    background-image: url(../images/quote.jpg);
+    background-size: cover;
+    width: 100%;
+}
+.quote::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0 0 0 / 75%);
+}
+
+.quote .container {
+    position: relative; /* Son utilisation a ce niveau c'est juste de permettre de ramener le text en front de l'image en background*/ 
+}
+
+.quote .container q {
+    font-size: 30px;
+    display: block;
+    margin-bottom: 20px;
+}
+.quote .container q::before {
+    content: '\f10d';
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    margin-right: 10px;
+    top: -5px;
+    position: relative;
+}
+.quote .container q::after {
+    content: '\f10e';
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    margin-left: 10px;
+    top: -5px;
+    position: relative;
+}
+
+.quote .container span {
+    text-align: right;
+}
+/* End Quote Section */
+/* Start Pricing Section */
+.pricing {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+}
+
+.pricing .plans {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+    text-align: center;
+}
+
+.pricing .plans .plan {
+    background-color: #fcfcfc;
+}
+
+.pricing .plans .plan .type-price {
+    padding: 40px 20px;
+    border-top: 1px solid var(--main-color);
+    border-bottom: 1px solid var(--main-color);
+}
+
+.pricing .plans .plan .type-price h3 {
+    font-weight: normal;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.pricing .plans .plan .type-price .price {
+    font-size: 60px;
+    font-weight: bold;
+}
+.pricing .plans .plan .type-price .price::before {
+    content: '$';
+    position: relative;
+    font-size: 30px;
+    right: 5px;
+    top: -31px;
+}
+.pricing .plans .plan .type-price .price::after {
+    content: '/Mo';
+    position: relative;
+    font-size: 20px;
+    left: 5px;
+}
+
+.pricing .plans .plan ul {
+    border-bottom: 1px solid var(--main-color);
+}
+
+.pricing .plans .plan ul li {
+    padding: 20px;
+    position: relative;
+}
+
+.pricing .plans .plan ul li:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    background-color: var(--main-color);
+    height: 1px;
+    width: 55%;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+}
+
+.pricing .plans .plan a {
+    display: block; /* Ca va nous permettre de le manipuler comme un paragraphe */
+    padding: 20px 20px;
+    text-decoration: none;
+    border: 1px solid var(--main-color);
+    width: fit-content;
+    margin: 30px auto;
+}
+
+.pricing .contact {
+    margin: 50px auto 20px;
+    text-align: center;
+}
+
+.pricing .contact p {
+    font-size: 20px;
+}
+
+.pricing .contact a {
+    display: block; /* Ca va nous permettre de le manipuler comme un paragraphe */
+    padding: 15px 30px;
+    text-decoration: none;
+    width: fit-content;
+    margin: 20px auto;
+    background-color: var(--main-color);
+    color: white;
+}
+/* End Pricing Section */
