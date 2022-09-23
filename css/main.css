@@ -7,7 +7,7 @@
     --transparent-color: #15627aa1;
     --section-padding : 100px;
     --paragraph-color : #444;
-    --main-duration : 0.3s;
+    --main-transition : 0.3s;
 }
 
 /* CSS Reset */
